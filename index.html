@@ -1,145 +1,883 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo Python - PyScript</title>
-  <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css">
-  <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #f4f4f4;
-    }
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    /* Área geral do jogo */
-    .container {
-      width: 100%;
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 24px;
+    <title>ALVORECER DOS DEUSES</title>
 
-      /* Cria colunas automaticamente quando houver espaço */
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
-      gap: 20px;
-      align-items: start;
-    }
 
-    /* Coluna esquerda: título + mídias */
-    .painel-jogo {
-      min-width: 0;
-    }
+    <!-- =====================================================
+         PYSCRIPT
+         ===================================================== -->
 
-    .cabecalho {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    <link
+        rel="stylesheet"
+        href="https://pyscript.net/releases/2026.3.1/core.css"
+    >
 
-    .cabecalho h1 {
-      margin-top: 0;
-    }
+    <script
+        type="module"
+        src="https://pyscript.net/releases/2026.3.1/core.js">
+    </script>
 
-    .midia,
-    .terminal {
-      background: #1d1d1d;
-      border-radius: 16px;
-      padding: 16px;
-    }
 
-    .terminal {
-      min-width: 0;
-      overflow: auto;
-    }
+    <style>
 
-    #imagem-cena {
-      width: 100%;
-      max-height: 460px;
-      object-fit: cover;
-      border-radius: 12px;
-      display: none;
-      margin-bottom: 12px;
-    }
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+           ===================================================== */
 
-    #video-intro {
-      width: 100%;
-      max-height: 460px;
-      border-radius: 12px;
-      display: none;
-      margin-bottom: 12px;
-    }
+        * {
 
-    #audio-fundo {
-      width: 100%;
-      margin-top: 8px;
-    }
+            box-sizing: border-box;
 
-    .aviso {
-      font-size: .95rem;
-      opacity: .8;
-      margin-top: 8px;
-    }
+        }
 
-    /* Em telas menores, garante uma única coluna */
-    @media (max-width: 800px) {
-      .container {
-        grid-template-columns: 1fr;
-        padding: 14px;
-      }
 
-      .cabecalho {
-        margin-bottom: 14px;
-      }
+        html,
+        body {
 
-      .cabecalho h1 {
-        font-size: 1.6rem;
-      }
-      .terminal {
-      max-height: 300px;
-      overflow: auto;
-    }
-    }
-  </style>
+            margin: 0;
+
+            padding: 0;
+
+            min-height: 100%;
+
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #090909,
+                    #151515
+                );
+
+            color: #f4f4f4;
+
+        }
+
+
+        /* =====================================================
+           CONTAINER PRINCIPAL
+           ===================================================== */
+
+        .container {
+
+            width: 100%;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 24px;
+
+        }
+
+
+        /* =====================================================
+           CABEÇALHO
+           ===================================================== */
+
+        .cabecalho {
+
+            text-align: center;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .cabecalho h1 {
+
+            margin:
+
+                0
+                0
+                8px
+                0;
+
+            font-size:
+
+                clamp(
+                    30px,
+                    5vw,
+                    54px
+                );
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .cabecalho p {
+
+            margin: 0;
+
+            opacity: 0.75;
+
+            font-size: 17px;
+
+        }
+
+
+        /* =====================================================
+           ÁREA DE MÍDIA
+           ===================================================== */
+
+        .midia {
+
+            background: #1a1a1a;
+
+            border-radius: 18px;
+
+            padding: 18px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+
+                0
+                10px
+                30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.35
+                );
+
+        }
+
+
+        /* =====================================================
+           IMAGEM DA CENA
+           ===================================================== */
+
+        #imagem-cena {
+
+            display: none;
+
+            width: 100%;
+
+            max-height: 500px;
+
+            object-fit: cover;
+
+            border-radius: 14px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =====================================================
+           VÍDEO
+           ===================================================== */
+
+        #video-intro {
+
+            display: none;
+
+            width: 100%;
+
+            max-height: 500px;
+
+            border-radius: 14px;
+
+            margin-bottom: 15px;
+
+            background: #000;
+
+        }
+
+
+        /* =====================================================
+           ÁUDIO
+           ===================================================== */
+
+        #audio-fundo {
+
+            width: 100%;
+
+            margin-top: 5px;
+
+        }
+
+
+        .controle-audio {
+
+            margin-top: 10px;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            opacity: 0.65;
+
+        }
+
+
+        /* =====================================================
+           TERMINAL
+           ===================================================== */
+
+        .terminal {
+
+            background: #171717;
+
+            border-radius: 18px;
+
+            padding: 20px;
+
+            min-height: 250px;
+
+            overflow: hidden;
+
+            box-shadow:
+
+                0
+                10px
+                30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.35
+                );
+
+        }
+
+
+        /* =====================================================
+           TELA INICIAL
+           ===================================================== */
+
+        #tela-inicio {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 99999;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 25px;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    #252525 0%,
+                    #101010 50%,
+                    #050505 100%
+                );
+
+        }
+
+
+        /* =====================================================
+           PAINEL DE ABERTURA
+           ===================================================== */
+
+        .painel-inicio {
+
+            width: 100%;
+
+            max-width: 760px;
+
+            text-align: center;
+
+            padding:
+
+                45px
+                30px;
+
+            border-radius: 24px;
+
+            background:
+
+                rgba(
+                    20,
+                    20,
+                    20,
+                    0.88
+                );
+
+            border:
+
+                1px
+                solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.08
+                );
+
+            box-shadow:
+
+                0
+                20px
+                60px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.55
+                );
+
+        }
+
+
+        .icone-jogo {
+
+            font-size: 70px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .painel-inicio h1 {
+
+            margin:
+
+                0
+                0
+                15px
+                0;
+
+            font-size:
+
+                clamp(
+                    36px,
+                    7vw,
+                    68px
+                );
+
+            line-height: 1;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .subtitulo {
+
+            font-size: 21px;
+
+            opacity: 0.82;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .autor {
+
+            font-size: 16px;
+
+            opacity: 0.58;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        /* =====================================================
+           BOTÃO INICIAR
+           ===================================================== */
+
+        #botao-iniciar {
+
+            border: none;
+
+            border-radius: 16px;
+
+            padding:
+
+                22px
+                48px;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition:
+
+                transform
+                0.2s,
+
+                box-shadow
+                0.2s;
+
+        }
+
+
+        #botao-iniciar:hover {
+
+            transform:
+
+                translateY(-2px)
+                scale(1.03);
+
+            box-shadow:
+
+                0
+                10px
+                30px
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.15
+                );
+
+        }
+
+
+        #botao-iniciar:active {
+
+            transform:
+
+                scale(
+                    0.98
+                );
+
+        }
+
+
+        .dica {
+
+            margin-top: 22px;
+
+            font-size: 14px;
+
+            opacity: 0.55;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+           ===================================================== */
+
+        @media
+        (
+            max-width: 700px
+        ) {
+
+            .container {
+
+                padding: 12px;
+
+            }
+
+
+            .painel-inicio {
+
+                padding:
+
+                    35px
+                    20px;
+
+            }
+
+
+            .icone-jogo {
+
+                font-size: 52px;
+
+            }
+
+
+            #botao-iniciar {
+
+                width: 100%;
+
+                padding:
+
+                    19px
+                    20px;
+
+                font-size: 21px;
+
+            }
+
+
+            .midia,
+            .terminal {
+
+                border-radius: 12px;
+
+                padding: 12px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
-  <div class="container">
 
-    <!-- Lado esquerdo: título + mídias -->
-    <section class="painel-jogo">
-      <div class="cabecalho">
-        <h1 id="titulo-jogo">🎮 Meu Jogo Python</h1>
-        <p id="autor-jogo">Autor: Nome do aluno</p>
-      </div>
 
-      <div class="midia">
-        <img id="imagem-cena" alt="Imagem da cena">
+<!-- =========================================================
+     TELA DE ABERTURA
+     ========================================================= -->
 
-        <video id="video-intro" controls>
-          Seu navegador não suporta vídeo.
+<div id="tela-inicio">
+
+
+    <div class="painel-inicio">
+
+
+        <div class="icone-jogo">
+
+            ⚔️
+
+        </div>
+
+
+        <h1>
+
+            ALVORECER<br>
+            DOS DEUSES
+
+        </h1>
+
+
+        <div class="subtitulo">
+
+            Uma aventura mitológica interativa
+
+        </div>
+
+
+        <div class="autor">
+
+            Criado por Felipe Garbin
+
+        </div>
+
+
+        <button
+            id="botao-iniciar"
+            type="button"
+        >
+
+            ▶ INICIAR JOGO
+
+        </button>
+
+
+        <div class="dica">
+
+            Clique para iniciar a aventura e habilitar a trilha sonora.
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     CONTEÚDO DO JOGO
+     ========================================================= -->
+
+<div class="container">
+
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="cabecalho">
+
+
+        <h1 id="titulo-jogo">
+
+            ALVORECER DOS DEUSES
+
+        </h1>
+
+
+        <p id="autor-jogo">
+
+            Autor: Felipe Garbin
+
+        </p>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         ÁREA DE MÍDIA
+         ===================================================== -->
+
+    <section class="midia">
+
+
+        <!-- IMAGEM ALTERADA PELO PYTHON -->
+
+        <img
+            id="imagem-cena"
+            src=""
+            alt="Imagem da cena atual"
+        >
+
+
+
+        <!-- VÍDEO CONTROLADO PELO PYTHON -->
+
+        <video
+            id="video-intro"
+            controls
+            preload="metadata"
+        >
+
+            Seu navegador não suporta reprodução de vídeo.
+
         </video>
 
-        <audio id="audio-fundo" cautoplay muted controls loop>
-          Seu navegador não suporta áudio.
+
+
+        <!-- ÁUDIO -->
+
+        <audio
+            id="audio-fundo"
+            controls
+            loop
+            preload="auto"
+        >
+
+            Seu navegador não suporta reprodução de áudio.
+
         </audio>
 
-        /*As mídias são opcionais. Se não forem usadas, o jogo continua funcionando.
-        */
-      </div>
+
+        <div class="controle-audio">
+
+            🔊 Você pode alterar o volume ou pausar a trilha sonora.
+
+        </div>
+
+
     </section>
 
-    <!-- Lado direito: terminal do jogo -->
+
+
+    <!-- =====================================================
+         TERMINAL PYSCRIPT
+         ===================================================== -->
+
     <section class="terminal">
-      <script type="py" src="./jogo.py" terminal worker></script>
+
+
+        <script
+            type="py"
+            src="./jogo.py"
+            terminal
+            worker>
+        </script>
+
+
     </section>
 
-  </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT DA PÁGINA
+     ========================================================= -->
+
+<script>
+
+
+    /*
+    ==========================================================
+    ELEMENTOS
+    ==========================================================
+    */
+
+
+    const telaInicio =
+        document.getElementById(
+            "tela-inicio"
+        );
+
+
+    const botaoIniciar =
+        document.getElementById(
+            "botao-iniciar"
+        );
+
+
+    const audio =
+        document.getElementById(
+            "audio-fundo"
+        );
+
+
+
+    /*
+    ==========================================================
+    CONFIGURAÇÃO DA TRILHA
+    ==========================================================
+    */
+
+
+    const trilhaInicial =
+
+        "assets/The Dawn of Aethelgard.mp3";
+
+
+
+    /*
+    ==========================================================
+    EVENTO DO BOTÃO INICIAR
+    ==========================================================
+    */
+
+
+    botaoIniciar.addEventListener(
+
+        "click",
+
+        async function () {
+
+
+            /*
+            ----------------------------------------------
+            Define a trilha sonora
+            ----------------------------------------------
+            */
+
+
+            audio.src =
+                trilhaInicial;
+
+
+            /*
+            ----------------------------------------------
+            Repete a música automaticamente
+            ----------------------------------------------
+            */
+
+
+            audio.loop =
+                true;
+
+
+            /*
+            ----------------------------------------------
+            Volume inicial
+
+            0.0 = mudo
+            0.5 = 50%
+            1.0 = máximo
+            ----------------------------------------------
+            */
+
+
+            audio.volume =
+                0.5;
+
+
+
+            /*
+            ----------------------------------------------
+            Tenta iniciar o áudio.
+
+            Agora o navegador permite,
+            pois houve um clique real do usuário.
+            ----------------------------------------------
+            */
+
+
+            try {
+
+
+                await audio.play();
+
+
+            }
+            catch (erro) {
+
+
+                /*
+                Se mesmo assim o navegador bloquear,
+                não interrompemos o jogo.
+
+                O usuário ainda pode clicar manualmente
+                no controle Play do áudio.
+                */
+
+
+                console.log(
+
+                    "Não foi possível iniciar automaticamente a trilha.",
+
+                    erro
+
+                );
+
+
+            }
+
+
+
+            /*
+            ----------------------------------------------
+            Esconde a tela inicial
+            ----------------------------------------------
+            */
+
+
+            telaInicio.style.display =
+                "none";
+
+
+        }
+
+    );
+
+
+</script>
+
+
 </body>
+
 </html>
