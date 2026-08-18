@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Python - PyScript</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; background:#111; color:#f4f4f4; }
+    .container { max-width:980px; margin:0 auto; padding:24px; }
+    .cabecalho { text-align:center; margin-bottom:20px; }
+    .midia,.terminal { background:#1d1d1d; border-radius:16px; padding:16px; margin-bottom:18px; }
+    #imagem-cena { width:100%; max-height:460px; object-fit:cover; border-radius:12px; display:none; margin-bottom:12px; }
+    #video-intro { width:100%; border-radius:12px; display:none; margin-bottom:12px; }
+    #audio-fundo { width:100%; margin-top:8px; }
+    .aviso { font-size:.95rem; opacity:.8; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cabecalho">
+      <h1 id="titulo-jogo">🎮 Meu Jogo Python</h1>
+      <p id="autor-jogo">Autor: Nome do aluno</p>
+    </div>
+
+    <div class="midia">
+      <img id="imagem-cena" alt="Imagem da cena">
+      <video id="video-intro" controls>Seu navegador não suporta vídeo.</video>
+      <audio id="audio-fundo" controls loop>Seu navegador não suporta áudio.</audio>
+      <p class="aviso">As mídias são opcionais. Se não forem usadas, o jogo continua funcionando.</p>
+    </div>
+
+    <div class="terminal">
+      <script type="py" src="./jogo.py" terminal worker></script>
+    </div>
+  </div>
+</body>
+</html>
