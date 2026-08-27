@@ -1,0 +1,15 @@
+<svg width="100%" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Solvarah desperta contido, quase humano, com uma corrente prateada ao redor</title>
+<desc>Uma figura humanoide de luz suave, envolta por uma corrente prateada brilhante que contém seu poder, em pé diante de Yara em um ambiente calmo ao amanhecer.</desc>
+<rect x="0" y="0" width="680" height="440" fill="#1c2436"/>
+<ellipse cx="340" cy="440" rx="340" ry="60" fill="#141a28"/>
+<circle cx="340" cy="220" r="90" fill="#f7d488" opacity="0.5"/>
+<ellipse cx="340" cy="280" rx="34" ry="90" fill="#fceec2"/>
+<circle cx="340" cy="185" r="26" fill="#fdf3d6"/>
+<path d="M300 250 Q320 260 340 255 Q360 260 380 250" stroke="#c9e0f5" stroke-width="2" fill="none" opacity="0.7"/>
+<path d="M295 300 Q320 312 340 306 Q360 312 385 300" stroke="#c9e0f5" stroke-width="2" fill="none" opacity="0.6"/>
+<path d="M300 340 Q320 350 340 346 Q360 350 380 340" stroke="#c9e0f5" stroke-width="2" fill="none" opacity="0.5"/>
+<circle cx="180" cy="380" r="34" fill="#26314a"/>
+<circle cx="180" cy="350" r="15" fill="#2c3a56"/>
+<path d="M150 440 L178 372 L182 372 L210 440 Z" fill="#212b40"/>
+</svg>

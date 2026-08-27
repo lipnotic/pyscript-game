@@ -1,0 +1,18 @@
+<svg width="100%" viewBox="0 0 680 460" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Yara entrega sua memória enquanto luz dourada e quente escapa da laje rachada</title>
+<desc>Uma silhueta feminina ajoelhada diante de uma laje rachada que libera luz dourada suave, com fragmentos translúcidos flutuando como memórias se dissipando.</desc>
+<rect x="0" y="0" width="680" height="460" fill="#1a1210"/>
+<ellipse cx="340" cy="250" rx="220" ry="180" fill="#3a2a12" opacity="0.5"/>
+<ellipse cx="340" cy="250" rx="140" ry="140" fill="#c98f3a" opacity="0.4"/>
+<rect x="270" y="150" width="140" height="200" rx="4" fill="#2a2018"/>
+<path d="M270 200 L340 150 L410 210 L370 260 L410 300 L340 350 L270 300 L310 250 Z" fill="none" stroke="#e8b56a" stroke-width="2"/>
+<path d="M270 200 L340 150 L410 210 L370 260 L410 300 L340 350 L270 300 L310 250 Z" fill="#f5c86b" opacity="0.5"/>
+<circle cx="240" cy="180" r="4" fill="#f0d8a0" opacity="0.7"/>
+<circle cx="450" cy="220" r="3" fill="#f0d8a0" opacity="0.6"/>
+<circle cx="420" cy="140" r="3" fill="#f0d8a0" opacity="0.6"/>
+<circle cx="220" cy="260" r="3" fill="#f0d8a0" opacity="0.5"/>
+<circle cx="340" cy="400" r="36" fill="#241a14"/>
+<circle cx="340" cy="368" r="16" fill="#2c2018"/>
+<path d="M300 460 L328 390 Q340 400 352 390 L380 460 Z" fill="#1e1611"/>
+<path d="M300 460 Q340 430 380 460" fill="#181310"/>
+</svg>

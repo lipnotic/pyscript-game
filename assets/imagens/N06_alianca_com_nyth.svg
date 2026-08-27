@@ -1,0 +1,22 @@
+<svg width="100%" viewBox="0 0 680 460" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Nyth, deusa do esquecimento, formada de água e estrelas</title>
+<desc>Uma figura etérea feminina feita de água prateada e pontos de luz estelar emerge diante de Yara, em um ambiente escuro azul-arroxeado.</desc>
+<rect x="0" y="0" width="680" height="460" fill="#0f0a1e"/>
+<circle cx="100" cy="60" r="1.4" fill="#c8c0f0"/>
+<circle cx="550" cy="50" r="1" fill="#c8c0f0"/>
+<circle cx="600" cy="120" r="1.4" fill="#c8c0f0"/>
+<circle cx="60" cy="150" r="1" fill="#c8c0f0"/>
+<ellipse cx="360" cy="420" rx="260" ry="30" fill="#1a1430"/>
+<path d="M330 420 Q290 260 340 140 Q390 260 350 420 Z" fill="#7d8fe0" opacity="0.5"/>
+<ellipse cx="340" cy="150" rx="34" ry="40" fill="#9ea8ec" opacity="0.7"/>
+<circle cx="340" cy="150" r="6" fill="#e8e4ff"/>
+<circle cx="315" cy="200" r="2" fill="#c8c0f0" opacity="0.8"/>
+<circle cx="365" cy="230" r="1.5" fill="#c8c0f0" opacity="0.7"/>
+<circle cx="330" cy="280" r="2" fill="#c8c0f0" opacity="0.6"/>
+<circle cx="355" cy="330" r="1.5" fill="#c8c0f0" opacity="0.5"/>
+<path d="M310 190 Q340 210 370 195" stroke="#b8bef0" stroke-width="1.5" fill="none" opacity="0.5"/>
+<path d="M300 250 Q340 275 380 255" stroke="#b8bef0" stroke-width="1.5" fill="none" opacity="0.4"/>
+<circle cx="180" cy="400" r="40" fill="#241c3e"/>
+<circle cx="180" cy="370" r="18" fill="#2a2246"/>
+<path d="M155 460 L180 388 L205 460 Z" fill="#20182f"/>
+</svg>
