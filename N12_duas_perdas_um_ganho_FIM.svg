@@ -1,0 +1,16 @@
+<svg width="680" viewBox="0 0 680 460" role="img" xmlns="http://www.w3.org/2000/svg" height="460" preserveAspectRatio="xMidYMid meet">
+<title>Fenda na Montanha Cinza com a laje de luz solidificada selando Solvarah</title>
+<desc>Uma caverna rochosa cinzenta com uma grande laje dourada brilhante embutida na parede, emitindo luz quente contra o cinza frio da pedra.</desc>
+<rect x="0" y="0" width="680" height="460" fill="#1c1e24"/>
+<polygon points="0,460 0,120 90,180 170,90 260,190 340,60 430,180 520,100 600,200 680,140 680,460" fill="#2c2e36"/>
+<polygon points="0,460 0,220 120,260 240,200 360,270 480,210 600,270 680,230 680,460" fill="#22242b"/>
+<ellipse cx="340" cy="270" rx="120" ry="150" fill="#141519"/>
+<rect x="280" y="220" width="120" height="160" rx="6" fill="#f5c86b"/>
+<rect x="280" y="220" width="120" height="160" rx="6" fill="none" stroke="#fff0c8" stroke-width="2"/>
+<line x1="300" y1="230" x2="290" y2="370" stroke="#fff0c8" stroke-width="1.5" opacity="0.6"/>
+<line x1="340" y1="222" x2="335" y2="378" stroke="#fff3d0" stroke-width="1.5" opacity="0.7"/>
+<line x1="380" y1="230" x2="388" y2="372" stroke="#fff0c8" stroke-width="1.5" opacity="0.6"/>
+<ellipse cx="340" cy="300" rx="90" ry="120" fill="#ffe8a8" opacity="0.35"/>
+<circle cx="340" cy="300" r="150" fill="#f5c86b" opacity="0.12"/>
+<circle cx="340" cy="300" r="220" fill="#f5c86b" opacity="0.06"/>
+</svg>

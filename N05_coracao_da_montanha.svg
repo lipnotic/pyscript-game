@@ -1,0 +1,21 @@
+<svg width="680" viewBox="0 0 680 460" role="img" xmlns="http://www.w3.org/2000/svg" height="460" preserveAspectRatio="xMidYMid meet">
+<title>Solvarah desperto por completo, chorando diante de um amanhecer suave</title>
+<desc>Uma figura dourada radiante ajoelhada com a cabeça inclinada, lágrimas de luz caindo, sob um céu de amanhecer suave em tons de rosa e âmbar, com Yara ao lado.</desc>
+<defs>
+<linearGradient id="dawn11" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#4a3a6a"/>
+<stop offset="45%" stop-color="#e08a6a"/>
+<stop offset="100%" stop-color="#ffd98a"/>
+</linearGradient>
+</defs>
+<rect x="0" y="0" width="680" height="460" fill="url(#dawn11)"/>
+<circle cx="340" cy="300" r="90" fill="#fff2c8" opacity="0.7"/>
+<rect x="0" y="360" width="680" height="100" fill="#4a3a30"/>
+<path d="M280 360 Q310 280 340 250 Q345 300 340 360 Z" fill="#f5c86b"/>
+<circle cx="340" cy="230" r="24" fill="#fdeec0"/>
+<path d="M330 250 Q325 265 330 275" stroke="#e8c88a" stroke-width="2" fill="none" opacity="0.8"/>
+<path d="M350 250 Q355 268 350 280" stroke="#e8c88a" stroke-width="2" fill="none" opacity="0.7"/>
+<circle cx="150" cy="400" r="30" fill="#3a2c26"/>
+<circle cx="150" cy="374" r="14" fill="#40312a"/>
+<path d="M126 460 L148 396 L152 396 L174 460 Z" fill="#332720"/>
+</svg>

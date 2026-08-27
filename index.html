@@ -224,21 +224,23 @@
             background: #080808;
         }
 
-        #imagem-cena,
+        #imagem-cena {
+            display: none;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            background: #080808;
+        }
+
         #video-cena {
+            display: none;
             width: 100%;
             height: 100%;
             min-height: 0;
             object-fit: contain;
             background: #080808;
-        }
-
-        #imagem-cena {
-            display: none;
-        }
-
-        #video-cena {
-            display: none;
         }
 
         .controles-midia {
@@ -713,6 +715,35 @@
         };
 
 
+        window.frameworkImage = {
+
+            show(src) {
+                const imagem =
+                    document.getElementById("imagem-cena");
+
+                imagem.onload = function () {
+                    imagem.style.display = "block";
+                    console.log("Imagem carregada:", src);
+                };
+
+                imagem.onerror = function () {
+                    imagem.style.display = "none";
+                    console.error("Falha ao carregar imagem:", src);
+                };
+
+                imagem.src = src;
+            },
+
+            hide() {
+                const imagem =
+                    document.getElementById("imagem-cena");
+
+                imagem.style.display = "none";
+                imagem.removeAttribute("src");
+            }
+        };
+
+
         window.frameworkVideo = {
 
             async play(src, autoplay = false) {
@@ -790,14 +821,7 @@
         );
 
 
-        document
-            .getElementById("imagem-cena")
-            .addEventListener(
-                "error",
-                function () {
-                    this.style.display = "none";
-                }
-            );
+
     </script>
 
     <!-- =====================================================

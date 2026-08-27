@@ -1,0 +1,26 @@
+<svg width="680" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg" height="440" preserveAspectRatio="xMidYMid meet">
+<title>Um mundo sem noite, sol permanente ofuscante sobre terra ressecada</title>
+<desc>Um sol enorme e intenso domina o céu inteiro, sem nuvens nem sombra, sobre uma paisagem ressecada com árvores murchas, transmitindo beleza excessiva e desequilíbrio.</desc>
+<defs>
+<radialGradient id="sun14" cx="50%" cy="35%" r="70%">
+<stop offset="0%" stop-color="#fffdf0"/>
+<stop offset="40%" stop-color="#ffe9a0"/>
+<stop offset="100%" stop-color="#f5b23c"/>
+</radialGradient>
+</defs>
+<rect x="0" y="0" width="680" height="440" fill="url(#sun14)"/>
+<circle cx="340" cy="150" r="90" fill="#fffef8"/>
+<g stroke="#fff8de" stroke-width="4" opacity="0.7">
+<line x1="340" y1="20" x2="340" y2="50"/>
+<line x1="170" y1="150" x2="200" y2="150"/>
+<line x1="480" y1="150" x2="510" y2="150"/>
+<line x1="220" y1="40" x2="240" y2="60"/>
+<line x1="460" y1="40" x2="440" y2="60"/>
+</g>
+<rect x="0" y="330" width="680" height="110" fill="#c99a4a"/>
+<path d="M0 330 Q200 315 340 330 Q500 345 680 320 L680 440 L0 440 Z" fill="#b5843c"/>
+<path d="M150 330 L150 260" stroke="#8a5c28" stroke-width="6"/>
+<path d="M150 300 L120 270 M150 290 L180 260 M150 310 L125 300" stroke="#8a5c28" stroke-width="3" fill="none"/>
+<path d="M520 330 L520 250" stroke="#8a5c28" stroke-width="6"/>
+<path d="M520 290 L490 260 M520 280 L550 250" stroke="#8a5c28" stroke-width="3" fill="none"/>
+</svg>

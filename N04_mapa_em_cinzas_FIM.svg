@@ -1,0 +1,27 @@
+<svg width="680" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg" height="440" preserveAspectRatio="xMidYMid meet">
+<title>Yara planta uma semente enquanto luzes distantes despertam lentamente no horizonte</title>
+<desc>Uma figura solitária ajoelhada plantando uma pequena semente brilhante em terra escura, com pequenos pontos de luz dourada surgindo ao longe no horizonte sob um céu de transição entre noite e amanhecer.</desc>
+<defs>
+<linearGradient id="dusk15" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#161a34"/>
+<stop offset="55%" stop-color="#3a3660"/>
+<stop offset="100%" stop-color="#6a5a7a"/>
+</linearGradient>
+</defs>
+<rect x="0" y="0" width="680" height="440" fill="url(#dusk15)"/>
+<circle cx="120" cy="60" r="1.4" fill="#d8ddf5"/>
+<circle cx="500" cy="40" r="1" fill="#d8ddf5"/>
+<circle cx="600" cy="90" r="1.4" fill="#d8ddf5"/>
+<circle cx="80" cy="130" r="1" fill="#d8ddf5"/>
+<circle cx="150" cy="300" r="4" fill="#ffdf9c" opacity="0.8"/>
+<circle cx="150" cy="300" r="10" fill="#ffdf9c" opacity="0.3"/>
+<circle cx="420" cy="290" r="3" fill="#ffdf9c" opacity="0.6"/>
+<circle cx="560" cy="310" r="3.5" fill="#ffdf9c" opacity="0.7"/>
+<circle cx="260" cy="280" r="2.5" fill="#ffdf9c" opacity="0.5"/>
+<rect x="0" y="340" width="680" height="100" fill="#241f30"/>
+<circle cx="330" cy="380" r="26" fill="#2c2638"/>
+<circle cx="330" cy="356" r="12" fill="#302a3e"/>
+<path d="M312 440 L328 364 L332 364 L348 440 Z" fill="#221d2c"/>
+<circle cx="330" cy="418" r="4" fill="#ffe9b0"/>
+<circle cx="330" cy="418" r="9" fill="#ffe9b0" opacity="0.3"/>
+</svg>

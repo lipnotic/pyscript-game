@@ -351,13 +351,16 @@ def atualizar_status():
 # ============================================================
 
 def mostrar_imagem(caminho):
+    # Vídeo e imagem são mutuamente exclusivos na área de mídia.
     window.frameworkVideo.stop()
-    imagem = el("imagem-cena")
+
     if not caminho:
-        imagem.style.display = "none"
+        window.frameworkImage.hide()
         return
-    imagem.src = caminho
-    imagem.style.display = "block"
+
+    # O carregamento fica no JavaScript para que onload/onerror
+    # sejam tratados de forma consistente, inclusive com SVG.
+    window.frameworkImage.show(caminho)
 
 
 def mostrar_video(caminho, autoplay=False):
